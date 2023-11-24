@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="image\file-icon-image-19.jpg" />
+    <None Remove="image\open-folder.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\open-folder.png" />
+  </ItemGroup>
+
+</Project>

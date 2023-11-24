@@ -1,0 +1,126 @@
+﻿<Window x:Class="PIIIProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Height="645" Width="1023"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    <!--rounded edge to whole app-->
+    <Border Background="#B4CF36" CornerRadius="20">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*" />
+                <ColumnDefinition Width="0.75*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="0.75*" />
+                <ColumnDefinition Width="0.75*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.75*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="0.75*" />
+                <RowDefinition Height="0.6*" />
+                <RowDefinition Height="0.6*" />
+                <RowDefinition Height="0.75*" />
+            </Grid.RowDefinitions>
+
+            <!--score counter-->
+            <Label Content="Score: " FontSize="20" FontWeight="Bold"
+                   Margin="10,23,28,34" x:Name="lbScoreText" />
+
+            <Label FontSize="20" FontWeight="Bold" Margin="78,23,95,34"
+               Grid.ColumnSpan="2" x:Name="lbScore" />
+
+            <!--question number header and correct/incorrect shows here-->
+            <Label Content="OOP QUIZ GAME" FontSize="40" FontWeight="Bold"
+                   Grid.ColumnSpan="6" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" x:Name="lbHeader" />
+
+            <!--question holder-->
+            <Border  Padding="5" BorderThickness="1" CornerRadius="20" Grid.Column="1"
+                     Grid.ColumnSpan="4" Margin="0,98,0,67" Grid.RowSpan="3"
+                     Background="White">
+                <TextBlock
+                   TextAlignment="Center"
+                   TextWrapping="Wrap"
+                   FontSize="35"
+                   x:Name="txbQuestion" />
+            </Border>
+
+            <!--button for the 1 of the 4 answers the user can choose-->
+            <Button Background="#00E4F6" Visibility="Collapsed"
+                    Grid.Row="2" Grid.ColumnSpan="2" Margin="41,58,80,30"
+                    Grid.Column="1"  FontSize="16" x:Name="btnAnswer1"
+                    Click="AnswerCheck" Tag="1" Height="auto"
+                    Width="auto" Grid.RowSpan="2">
+                <TextBlock TextWrapping="Wrap" Text="" x:Name="txbAnswer1Content" />
+            </Button>
+
+            <Button  Background="#00E4F6" Visibility="Collapsed"
+                 Grid.Row="2" Grid.ColumnSpan="2"
+                 Margin="80,58,41,30" Grid.Column="3"
+                 Grid.RowSpan="2" x:Name="btnAnswer2"
+                 Click="AnswerCheck" Tag="2">
+                <TextBlock TextWrapping="Wrap" x:Name="txbAnswer2Content" />
+            </Button>
+
+            <Button Background="#00E4F6" Visibility="Collapsed"
+                 Grid.Row="4" Grid.ColumnSpan="2" Margin="41,10,80,83"
+                 Grid.Column="1" FontSize="16" x:Name="btnAnswer3"
+                 Click="AnswerCheck" Grid.RowSpan="2" Tag="3">
+                <TextBlock TextWrapping="Wrap" x:Name="txbAnswer3Content" />
+            </Button>
+
+            <Button
+                Background="#00E4F6" Visibility="Collapsed"
+                Grid.Row="4" Grid.ColumnSpan="2" Margin="80,10,41,83"
+                Grid.Column="3" FontSize="16" x:Name="btnAnswer4"
+                Click="AnswerCheck" Grid.RowSpan="2" Tag="4">
+                <TextBlock TextWrapping="Wrap" x:Name="txbAnswer4Content" />
+            </Button>
+
+            <!--quiz loading label and button-->
+            <Label Content="Load your Questions:"  FontSize="30" FontWeight="Bold"
+                   Grid.Column="2" Grid.ColumnSpan="2"
+                   Margin="46,46,46,39" Grid.RowSpan="2"
+                   Grid.Row="2" x:Name="lbLoadText" />
+
+            <Button BorderThickness="0" BorderBrush="Transparent"
+                Grid.Row="2" Grid.ColumnSpan="2" Margin="80,108,80,0"
+                FontWeight="Bold" Width="auto" FontSize="16" Grid.Column="2"
+                x:Name="btnLoad" Click="btnLoad_Click" Grid.RowSpan="3"
+                Style="{StaticResource HoverFix}">
+                <Button.Background>
+                    <ImageBrush ImageSource="./image/open-folder.png" />
+                </Button.Background>
+            </Button>
+
+            <!--buttons for displaying the next question and finishing the quiz-->
+            <Button Content="Next question" Background="#2274A5" Foreground="White"
+                    Grid.Row="5" Margin="41,39,80,25" Visibility="Collapsed"
+                    FontWeight="Bold" Grid.Column="1" Width="auto" FontSize="16"
+                    Style="{StaticResource regButtons}" Grid.ColumnSpan="2"
+                    x:Name="btnNextQuestion" Click="btnNextQuestion_Click" />
+
+            <Button Content="Finish Quiz" Background="#2274A5" Foreground="White"
+                    Grid.Row="5"  Margin="80,39,41,25" Visibility="Collapsed"
+                    FontWeight="Bold" Grid.Column="3" Width="auto" FontSize="16"
+                    Style="{StaticResource regButtons}" Grid.ColumnSpan="2"
+                    x:Name="btnFinish" Click="btnFinish_Click" />
+
+            <!--exit button if user wants to exit before loading the quiz-->
+            <Button Content="Exit"  Background="#2274A5" Foreground="White"
+                    Grid.Row="5" Grid.ColumnSpan="2" Margin="29,34,28,33"
+                    Style="{StaticResource regButtons}" FontWeight="Bold"
+                    Width="auto" FontSize="16" Grid.Column="4"
+                    x:Name="btnExit" Click="btnExit_Click" />
+        </Grid>
+    </Border>
+</Window>
