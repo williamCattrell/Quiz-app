@@ -1,0 +1,9 @@
+When was C# created?,1995,2015,2004,2000,2000
+Which is a pillar of OOP?,Obfuscation,Boilerplate,Encapsulation,Parenting,Encapsulation
+What is the true name of Javascript?,Javascript,ECMAScript,Sillyscript,Scrapscript,ECMAScript
+1011 in decimal is?,10,9,3,11,11
+5 in binary is?,0101,0011,1011,1111,0101
+Int32 is a?,Primitive,Thing,Array of characters,Pointer,Primitive
+C# does not support?,Down casting,Multiple Inheritance,Lambda expressions,Lists,Multiple Inheritance
+___ don't exist in Python,Arrays,Variables,Functions,Classes,Arrays
+___ is a relative path,./,..../,C:Users/,C:,./
