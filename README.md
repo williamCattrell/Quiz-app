@@ -4,6 +4,7 @@ the user interface of the application was made using C# anf WPF to create the po
 <p style="text-align:center;"><img src="./QuizAppPictures/mainScreen.JPG" alt="main"  height="600px" width="1000px"/></p>
 <p style="text-align:center;"><img src="./QuizAppPictures/question.JPG" alt="main"  height="600px" width="1000px"/></p>
 <p style="text-align:center;"><img src="./QuizAppPictures/answer.JPG" alt="main"  height="600px" width="1000px"/></p>
+
 # QuickStart
 
 1. download repository
