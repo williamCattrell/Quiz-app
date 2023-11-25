@@ -1,7 +1,9 @@
 # Quiz-app
 this is a quiz made for a group project using WPF in C# to make a desktop application
 the user interface of the application was made using C# anf WPF to create the polished user interface shown.
-
+<p style="text-align:center;"><img src="./QuizAppPictures/mainScreen.JPG" alt="main"  height="600px" width="1000px"/></p>
+<p style="text-align:center;"><img src="./QuizAppPictures/question.JPG" alt="main"  height="600px" width="1000px"/></p>
+<p style="text-align:center;"><img src="./QuizAppPictures/answer.JPG" alt="main"  height="600px" width="1000px"/></p>
 # QuickStart
 
 1. download repository
