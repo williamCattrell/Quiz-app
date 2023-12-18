@@ -9,9 +9,6 @@ using System.Windows.Media;
 
 namespace PIIIProject
 {
-    //William Cattrell 1855666
-    //Griffin Bonomo-Clough 2161736
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -150,7 +147,7 @@ namespace PIIIProject
 
         private bool LoadQuestionFile()
         {
-            //load sequence same as in CSConferenceApp done in class
+            
             OpenFileDialog questionFile = new OpenFileDialog();
             questionFile.Filter = "Text Files|*.txt";
             questionFile.Title = "Select a Question File to Load";
